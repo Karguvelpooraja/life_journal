@@ -17,6 +17,11 @@ export class AppComponent {
 
   education = [
     {
+      school: 'TDTA primary school',
+      period: '2001 - 2006',
+      detail: 'Class 1 - 6 in Kothalarivilai, Tuticorin'
+    },
+    {
       school: 'SMA Govt Hr Sec School',
       period: '2006 - 2013',
       detail: 'Class 6 - 12 in Siruthondanallur, Tuticorin'
