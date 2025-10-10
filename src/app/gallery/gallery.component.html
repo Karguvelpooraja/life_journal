@@ -1,0 +1,19 @@
+<div class="gallery-container">
+  <h2>📸 Wedding Gallery</h2>
+
+  <div class="photo-grid">
+    <div *ngFor="let photo of weddingPhotos" class="photo-card">
+      <img [src]="photo" alt="Wedding Photo" />
+    </div>
+  </div>
+
+  <h2>👨‍👩‍👧‍👦 Family Gallery</h2>
+  <div class="photo-grid">
+    <div *ngFor="let photo of familyPhotos" class="photo-card">
+      <img [src]="photo" alt="Family Photo" />
+    </div>
+  </div>
+
+  <h2>🧒 Kids Corner</h2>
+  <app-kids-carousel></app-kids-carousel>
+</div>

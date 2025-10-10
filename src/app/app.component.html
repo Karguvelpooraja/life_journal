@@ -1,29 +1,5 @@
-<div class="container">
-  <header>
-    <h1>{{ aboutMe.name }}</h1>
-    <p class="tagline">{{ aboutMe.intro }}</p>
-    <h3>{{ aboutMe.currentRole }}</h3>
-  </header>
-
-  <section>
-    <h2>🎓 Education</h2>
-    <div class="card" *ngFor="let edu of education">
-      <h3>{{ edu.school }}</h3>
-      <p><strong>{{ edu.period }}</strong></p>
-      <p>{{ edu.detail }}</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>💼 Experience</h2>
-    <div class="card" *ngFor="let exp of experience">
-      <h3>{{ exp.company }}</h3>
-      <p><strong>{{ exp.period }}</strong> | <em>{{ exp.role }}</em></p>
-      <p>{{ exp.detail }}</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© {{ currentYear }} {{ aboutMe.name }} |  🚀</p>
-  </footer>
-</div>
+<app-header class=""></app-header>
+<main class="page-container">
+  <router-outlet></router-outlet>
+</main> 
+<app-footer></app-footer>

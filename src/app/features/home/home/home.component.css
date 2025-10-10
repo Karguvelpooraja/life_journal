@@ -1,0 +1,49 @@
+.hero{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  align-items:center;
+  padding:20px;
+  background: linear-gradient(180deg,#fff0f0,#fff7f0);
+  border-radius:12px;
+  margin-bottom:20px;
+}
+.hero-left{flex:1;min-width:280px;}
+.hero-left h2{font-size:28px;color:#b63a3a;margin-bottom:6px;}
+.hero-left h3{font-size:20px;color:#6b3a3a;margin-bottom:12px;}
+.big-date{font-size:18px;font-weight:700;color:#8a2b2b;margin-bottom:6px;}
+.venue{font-size:16px;margin-bottom:12px;}
+.hero-right img{width:100%;max-width:400px;border-radius:12px;object-fit:cover;}
+
+.cta{margin-top:12px;}
+.btn{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:8px;
+  background:#b63a3a;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  margin-right:8px;
+}
+.btn.outline{
+  background:transparent;
+  border:2px solid #b63a3a;
+  color:#b63a3a;
+}
+
+.quick-info{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:space-between;
+}
+.card{
+  flex:1;
+  min-width:200px;
+  padding:12px;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.card h4{color:#b63a3a;margin-bottom:6px;}

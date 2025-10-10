@@ -1,0 +1,55 @@
+<div class="couple-story-container">
+  <h1 class="title animate-on-scroll">💖 Our Love Story 💖</h1>
+  <p class="subtitle animate-on-scroll">Karguvel ❤️ Anu — A journey from friendship to forever</p>
+
+  <div class="story-timeline">
+    <div class="story-item animate-on-scroll left">
+      <div class="content">
+        <h2>🌸 How We Met</h2>
+        <p>
+          It all began with a smile! We met through family circles, and soon small talks became
+          endless conversations. That’s where our story started — simple, pure, and real.
+        </p>
+      </div>
+      <img src="assets/images/met.jpg" alt="How We Met">
+    </div>
+
+    <div class="story-item animate-on-scroll right">
+      <img src="assets/images/engagement.jpg" alt="Engagement">
+      <div class="content">
+        <h2>💍 Engagement Ceremony</h2>
+        <p>
+          On a beautiful day surrounded by love and laughter, we exchanged rings and promised to
+          walk this journey together — with joy, respect, and care forever.
+        </p>
+      </div>
+    </div>
+
+    <div class="story-item animate-on-scroll left">
+      <div class="content">
+        <h2>🎉 Wedding Countdown</h2>
+        <p>
+          The date is set — <b>November 23, 2025</b> — in the divine Tiruchendur temple.
+          With family blessings, our forever begins soon!
+        </p>
+      </div>
+      <img src="assets/images/wedding.jpg" alt="Wedding Day">
+    </div>
+  </div>
+</div>
+<!-- Existing timeline section above -->
+
+<!-- Photo Carousel Section -->
+<div class="photo-carousel-section animate-on-scroll">
+  <h2>📸 Our Lovely Moments</h2>
+  <div class="photo-carousel">
+    <div class="photo-slide" *ngFor="let img of couplePhotos; let i = index"
+         [class.active]="i === currentIndex">
+      <img [src]="img" alt="Couple Photo {{i + 1}}">
+    </div>
+
+    <button class="prev" (click)="prevSlide()">&#10094;</button>
+    <button class="next" (click)="nextSlide()">&#10095;</button>
+  </div>
+</div>
+

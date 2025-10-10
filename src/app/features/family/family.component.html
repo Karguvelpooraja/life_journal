@@ -1,0 +1,29 @@
+<section class="family-page">
+  <h2>Our Beloved Families ❤️</h2>
+  <p class="intro">
+    Behind every happy couple stands two loving families.  
+    Meet the people who made our journey special.
+  </p>
+
+  <div class="family-section">
+    <h3>👨‍👩‍👧‍👧 Groom's Family</h3>
+    <div class="family-grid">
+      <div class="card" *ngFor="let member of groomFamily">
+        <img [src]="member.img" alt="{{member.name}}" />
+        <h4>{{member.name}}</h4>
+        <p>{{member.relation}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="family-section">
+    <h3>👩‍👩‍👦 Bride's Family</h3>
+    <div class="family-grid">
+      <div class="card" *ngFor="let member of brideFamily">
+        <img [src]="member.img" alt="{{member.name}}" />
+        <h4>{{member.name}}</h4>
+        <p>{{member.relation}}</p>
+      </div>
+    </div>
+  </div>
+</section>

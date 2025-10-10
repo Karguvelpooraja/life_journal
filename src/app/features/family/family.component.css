@@ -1,0 +1,60 @@
+.family-page {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(180deg, #fff0f8, #fef8ff);
+  border-radius: 12px;
+}
+
+.family-page h2 {
+  color: #b63a3a;
+  margin-bottom: 6px;
+}
+.intro {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.family-section {
+  margin-bottom: 30px;
+}
+
+.family-section h3 {
+  color: #8a2b2b;
+  margin-bottom: 12px;
+}
+
+.family-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 6px;
+}
+
+.card h4 {
+  margin: 0;
+  color: #b63a3a;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}

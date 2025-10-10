@@ -1,0 +1,35 @@
+.schedule-container {
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  color: #8b5e34;
+  margin-bottom: 25px;
+}
+
+.event-card {
+  background-color: #fff7ee;
+  border: 2px solid #a67c52;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event-card h3 {
+  margin-top: 0;
+  color: #6f4f28;
+}
+
+.event-card p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.event-card .desc {
+  color: #5e4b2f;
+  font-style: italic;
+}

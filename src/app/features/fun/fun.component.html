@@ -1,0 +1,24 @@
+<div class="kids-page">
+  <h1 class="animate-on-scroll">🎈 Kids Fun Corner 🎠</h1>
+  <p class="subtitle animate-on-scroll">Enjoy photos, balloons, and laughter from our little stars!</p>
+
+  <!-- Balloons -->
+  <div class="balloons animate-on-scroll">
+    <div class="balloon red"></div>
+    <div class="balloon blue"></div>
+    <div class="balloon yellow"></div>
+  </div>
+
+  <!-- Carousel Container -->
+  <div class="carousel animate-on-scroll">
+    <div class="carousel-track" [style.transform]="getTransform()">
+      <div class="slide" *ngFor="let img of kidsImages">
+        <img [src]="img" alt="Kids Fun Image" />
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="prev" (click)="prevSlide()">&#10094;</button>
+    <button class="next" (click)="nextSlide()">&#10095;</button>
+  </div>
+</div>

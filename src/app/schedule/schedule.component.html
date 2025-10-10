@@ -1,0 +1,18 @@
+<div class="timeline-container">
+  <h2>💒 Our Wedding Events</h2>
+
+  <div *ngFor="let event of events; let i = index"
+       class="timeline-item"
+       [class.left]="i % 2 === 0"
+       [class.right]="i % 2 !== 0"
+       [style.animationDelay]="(i * 0.3) + 's'">
+
+    <div class="content">
+      <h3>{{ event.name }}</h3>
+      <p><strong>Date:</strong> {{ event.date }}</p>
+      <p><strong>Time:</strong> {{ event.time }}</p>
+      <p><strong>Location:</strong> {{ event.location }}</p>
+      <p class="desc">{{ event.description }}</p>
+    </div>
+  </div>
+</div>

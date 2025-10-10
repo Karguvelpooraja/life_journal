@@ -1,0 +1,70 @@
+.rsvp-container {
+  background: linear-gradient(to bottom, #fffaf0, #fff2e6);
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 30px auto;
+  border-radius: 20px;
+  border: 3px solid #f2d9b0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-family: 'Tiro Tamil', serif;
+  color: #a83232;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  color: #a83232;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #f2d9b0;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #a83232;
+}
+
+.submit-btn {
+  background-color: #a83232;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #c94343;
+}
+
+.thankyou {
+  margin-top: 25px;
+  background: #fff7f0;
+  padding: 15px;
+  border-radius: 12px;
+  color: #a83232;
+}

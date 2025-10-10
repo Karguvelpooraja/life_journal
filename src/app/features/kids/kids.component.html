@@ -1,0 +1,21 @@
+<section class="kids-page">
+  <h2>Our Cute Little Guests 👶🎉</h2>
+  <p>Meet the adorable kids bringing joy to our celebration!</p>
+
+  <div class="carousel">
+    <button class="nav prev" (click)="prev()">&#10094;</button>
+
+    <div class="image-container">
+      <img [src]="kidsImages[currentIndex]" alt="Kid photo" />
+    </div>
+
+    <button class="nav next" (click)="next()">&#10095;</button>
+  </div>
+
+  <div class="dots">
+    <span
+      *ngFor="let img of kidsImages; let i = index"
+      [class.active]="i === currentIndex"
+    ></span>
+  </div>
+</section>
