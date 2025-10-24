@@ -1,25 +1,34 @@
-<header class="site-header">
-  <div class="brand">
-    <img src="/assets/images/karguvel.jpg" alt="Groom" class="logo" />
-    <div class="titles">
-      <h1>Karguvel ♥ Anu</h1>
-      <!-- <p>23 November 2025 — Tiruchendur • 9:30 AM</p> -->
+<header class="site-header navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="/assets/images/karguvel.jpg" alt="Groom" class="logo me-2" />
+      <span class="fw-bold">Karguvel ♥ Anu</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse" #navbarCollapse>
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item" *ngFor="let link of navLinks">
+          <a
+            class="nav-link"
+            [routerLink]="link.path"
+            routerLinkActive="active"
+            (click)="closeNavbar()"
+            >{{ link.label }}</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
-  <nav class="main-nav">
-    <a routerLink="/">Home</a>
-    <a routerLink="/schedule">Schedule</a>
-    <a routerLink="/family">Family</a>
-    <a routerLink="/fun">Fun</a>
-    <a routerLink="/gallery">Gallery</a>
-    <a routerLink="/couple-story">Story</a>
-    <a routerLink="/carousel">Carousel</a>
-    <a routerLink="/directions">Directions</a>
-    <a routerLink="/reception">Reception</a>
-    <a routerLink="/kids">Kids</a>
-    <a routerLink="/countdown">Countdown</a>
-    <a routerLink="/rsvp">RSVP</a>
-    <a routerLink="/contact">Contact</a>
-    <a routerLink="/location">Map</a>
-  </nav>
 </header>

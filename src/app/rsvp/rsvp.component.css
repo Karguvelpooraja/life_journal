@@ -1,24 +1,51 @@
 .rsvp-container {
+  position: relative;
   background: linear-gradient(to bottom, #fffaf0, #fff2e6);
   padding: 40px 20px;
   max-width: 600px;
   margin: 30px auto;
   border-radius: 20px;
   border: 3px solid #f2d9b0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   text-align: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.rsvp-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+}
+
+.rsvp-background::before {
+  content: '💖 💌 💖';
+  position: absolute;
+  font-size: 24px;
+  top: -20%;
+  left: 10%;
+  animation: floatHearts 8s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(120%) rotate(360deg); }
 }
 
 .title {
-  font-family: 'Tiro Tamil', serif;
   color: #a83232;
   font-size: 28px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .desc {
   color: #555;
   margin-bottom: 25px;
+  font-size: 16px;
 }
 
 .rsvp-form {
@@ -26,6 +53,10 @@
   flex-direction: column;
   gap: 15px;
   text-align: left;
+  background: #fff7f2;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 label {
@@ -46,7 +77,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .submit-btn {
-  background-color: #a83232;
+  background: linear-gradient(135deg, #a83232, #c94343);
   color: white;
   padding: 12px;
   border: none;
@@ -54,17 +85,36 @@ input:focus, select:focus, textarea:focus {
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .submit-btn:hover {
-  background-color: #c94343;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .thankyou {
   margin-top: 25px;
   background: #fff7f0;
-  padding: 15px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 15px;
   color: #a83232;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .rsvp-container {
+    padding: 20px 10px;
+  }
+  .rsvp-form {
+    padding: 15px;
+  }
+  .title { font-size: 24px; }
 }

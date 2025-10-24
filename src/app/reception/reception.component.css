@@ -3,12 +3,12 @@
 .reception-wrapper {
   position: relative;
   min-height: 100vh;
-  /* background: url('assets/images/kolam-bg.jpg') no-repeat center center fixed; */
-  background-size: cover;
+  background: radial-gradient(circle at top, #fff3e0 0%, #ffe0b2 100%);
   overflow: hidden;
+  padding: 40px 10px;
 }
 
-/* falling flowers animation */
+/* Floating flowers animation */
 .flower-overlay::before, .flower-overlay::after {
   content: '🌸 🌼 🌺 🌻';
   position: absolute;
@@ -17,40 +17,76 @@
   width: 100%;
   height: 100%;
   font-size: 28px;
-  animation: flowerFall 8s linear infinite;
-  opacity: 0.4;
+  animation: flowerFall 10s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 @keyframes flowerFall {
-  0% { transform: translateY(-10%); }
-  100% { transform: translateY(110%); }
+  0% { transform: translateY(-10%) rotate(0deg); }
+  100% { transform: translateY(110%) rotate(360deg); }
 }
 
+/* Golden light glow overlay */
+.glow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,215,128,0.2) 0%, transparent 70%);
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* Invitation Card */
 .invitation-card {
   position: relative;
   max-width: 750px;
   margin: 60px auto;
-  padding: 40px;
+  padding: 40px 30px;
   background: #fffbe8;
-  border: 10px double #a67c52;
+  border: 10px double #b8860b;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
   font-family: 'Poppins', sans-serif;
+  z-index: 2;
+  animation: fadeInUp 1.2s ease-out;
 }
 
+@keyframes fadeInUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Header */
 .header h1 {
   color: #8b4513;
   font-family: 'Noto Serif Tamil', serif;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .header h2 {
   color: #a67c52;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
+/* Quote */
+.quote {
+  font-style: italic;
+  font-size: 17px;
+  color: #5e3a1f;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+/* Couple Section */
 .couple-section {
   display: flex;
   justify-content: center;
@@ -60,16 +96,16 @@
 }
 
 .photo {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  border: 5px solid #a67c52;
+  border: 6px solid #a67c52;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 .heart {
-  font-size: 34px;
+  font-size: 36px;
   animation: pulse 1.2s infinite;
 }
 
@@ -78,29 +114,31 @@
   50% { transform: scale(1.2); color: darkred; }
 }
 
+/* Details Section */
 .details {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .tamil-text {
   font-family: 'Noto Serif Tamil', serif;
   font-size: 18px;
   color: #5c3d1f;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .eng-text {
   font-size: 17px;
   color: #7b5a3a;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .reception-info p {
   font-size: 16px;
-  margin: 5px 0;
+  margin: 6px 0;
   color: #4a3219;
 }
 
+/* Buttons */
 .btns {
   margin-top: 20px;
   display: flex;
@@ -109,20 +147,22 @@
 }
 
 .btn {
-  background-color: #a67c52;
+  background: linear-gradient(135deg, #b8860b, #d4a017);
   color: white;
   border: none;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 8px;
   font-size: 15px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
-  background-color: #8b5e34;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* Footer */
 footer {
   margin-top: 25px;
   font-size: 14px;

@@ -20,9 +20,9 @@ export class FunComponent implements OnInit {
 
   constructor(private el: ElementRef) {}
 
-  ngOnInit() {
-    this.checkVisibility();
-  }
+  // ngOnInit() {
+  //   this.checkVisibility();
+  // }
 
   @HostListener('window:scroll', [])
   onScroll() {
@@ -53,5 +53,29 @@ export class FunComponent implements OnInit {
       }
     });
   }
+  ngOnInit() {
+  this.checkVisibility();
+  // this.createBalloons(15); // create 15 floating balloons
+}
+
+createBalloons(count: number) {
+  const colors = ['red', 'blue', 'yellow'];
+  const container = document.querySelector('.kids-page') as HTMLElement;
+
+  for (let i = 0; i < count; i++) {
+    const balloon = document.createElement('div');
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    balloon.classList.add('balloon', color);
+
+    // random horizontal position and animation duration
+    balloon.style.left = Math.random() * 90 + 'vw';
+    balloon.style.animationDuration = 5 + Math.random() * 5 + 's';
+    balloon.style.width = 30 + Math.random() * 40 + 'px';
+    balloon.style.height = 40 + Math.random() * 60 + 'px';
+
+    container.appendChild(balloon);
+  }
+}
+
 
 }

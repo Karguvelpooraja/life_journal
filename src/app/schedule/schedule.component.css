@@ -1,12 +1,14 @@
-/* Main container */
 .timeline-container {
   position: relative;
   max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fffaf0, #fff2e6);
+  border-radius: 15px;
 }
 
+/* Title */
 .timeline-container h2 {
   text-align: center;
   color: #8b5e34;
@@ -25,27 +27,38 @@
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  border-radius: 3px;
 }
 
-/* Each event box */
+/* Floating emojis along line */
+.timeline-container::before {
+  content: '🌸💖🌼';
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  font-size: 24px;
+  transform: translateX(-50%);
+  animation: floatTimeline 8s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes floatTimeline {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+/* Timeline items */
 .timeline-item {
-  /* padding: 15px 40px; */
   position: relative;
-  background-color: inherit;
   width: 50%;
   opacity: 0;
   animation: fadeInMove 0.8s forwards ease-out;
+  margin-bottom: 30px;
 }
 
-/* Left side */
-.timeline-item.left {
-  left: 0;
-}
-
-/* Right side */
-.timeline-item.right {
-  left: 50%;
-}
+.timeline-item.left { left: 0; }
+.timeline-item.right { left: 50%; }
 
 /* Circle dots */
 .timeline-item::before {
@@ -56,73 +69,98 @@
   right: -10px;
   background-color: #fff;
   border: 4px solid #a67c52;
-  top: 15px;
+  top: 20px;
   border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   z-index: 1;
 }
-
-.timeline-item.right::before {
-  left: -10px;
-}
+.timeline-item.right::before { left: -10px; }
 
 /* Content box */
 .content {
   padding: 20px;
   background-color: #fff7ee;
   position: relative;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 2px solid #a67c52;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .content:hover {
   transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.content h3 {
-  margin-top: 0;
-  color: #6f4f28;
-}
+.content h3 { margin-top: 0; color: #6f4f28; }
+.content p { margin: 5px 0; }
+.content .desc { font-style: italic; color: #5e4b2f; }
 
-.content p {
-  margin: 5px 0;
-}
-
-.content .desc {
-  font-style: italic;
-  color: #5e4b2f;
-}
-
-/* Keyframes for animation */
+/* Keyframes */
 @keyframes fadeInMove {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive for mobile */
+/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-  .timeline-container::after {
-    left: 31px;
-  }
+  .timeline-container::after { left: 31px; }
+  .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+  .timeline-item.right { left: 0%; }
+  .timeline-item::before { left: 15px; }
+}
+.timeline-wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding: 20px 0;
+}
 
-  .timeline-item {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
+.emoji-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* so emojis don’t block scroll */
+  overflow: hidden;
+}
 
-  .timeline-item.right {
-    left: 0%;
-  }
+.emoji-overlay::before,
+.emoji-overlay::after {
+  content: '💐 🎈 ❤️ 🌸 🌼';
+  position: absolute;
+  font-size: 24px;
+  animation: floatEmoji 12s linear infinite;
+  opacity: 0.3;
+}
 
-  .timeline-item::before {
-    left: 15px;
+.emoji-overlay::before {
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.emoji-overlay::after {
+  left: 80%;
+  animation-delay: 6s;
+}
+
+@keyframes floatEmoji {
+  0% {
+    transform: translateY(100%) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+  90% { opacity: 0.2; }
+  100% {
+    transform: translateY(-120%) rotate(360deg);
+    opacity: 0;
   }
 }
+
+/* Make sure timeline items are above emojis */
+.timeline-container {
+  position: relative;
+  z-index: 1;
+}
+

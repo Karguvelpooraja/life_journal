@@ -1,0 +1,79 @@
+<!-- Navbar -->
+<nav class="navbar" [class.active]="menuOpen">
+  <div class="logo">💍 Karguvel ❤️ Anu</div>
+  <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+  <ul>
+    <li><a href="#home" (click)="closeMenu()">Home</a></li>
+    <li><a href="#story" (click)="closeMenu()">Story</a></li>
+    <li><a href="#venue" (click)="closeMenu()">Venue</a></li>
+    <li><a href="#rsvp" (click)="closeMenu()">RSVP</a></li>
+    <li><a href="#gallery" (click)="closeMenu()">Gallery</a></li>
+  </ul>
+</nav>
+
+<div class="home-container">
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content animate-on-scroll">
+      <h1 class="couple-names">💞 Karguvel ❤️ Anu 💞</h1>
+      <p class="tagline">Two hearts, one beautiful journey begins...</p>
+      <p class="wedding-date">📅 Wedding on November 23, 2025</p>
+      <button class="rsvp-btn" (click)="scrollTo('rsvp')">RSVP Now</button>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section class="countdown-section animate-on-scroll">
+    <h2>Only {{daysLeft}} Days Left for the Big Day!</h2>
+    <div class="countdown">
+      <div class="time-box"><span>{{daysLeft}}</span>Days</div>
+      <div class="time-box"><span>{{hoursLeft}}</span>Hours</div>
+      <div class="time-box"><span>{{minutesLeft}}</span>Minutes</div>
+      <div class="time-box"><span>{{secondsLeft}}</span>Seconds</div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section id="story" class="story-section animate-on-scroll">
+    <h2>Our Story 💖</h2>
+    <p>It started with a smile... grew into friendship... and now forever love.  
+      Join us as we begin a new chapter surrounded by family and friends.</p>
+  </section>
+
+  <!-- Venue -->
+  <section id="venue" class="venue-section animate-on-scroll">
+    <h2>Wedding Venue 📍</h2>
+    <p>Tiruchendur Temple, Tamil Nadu</p>
+    <p class="note">Let’s celebrate the divine blessings and eternal love at the holy seashore.</p>
+    <a href="https://maps.google.com" target="_blank" class="map-btn">View Map</a>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="rsvp-section animate-on-scroll">
+    <h2>Confirm Your Presence 💌</h2>
+    <p>We can’t wait to celebrate with you! Please confirm your attendance below.</p>
+    <form class="rsvp-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="text" placeholder="How many guests?" required />
+      <button type="submit">Send RSVP</button>
+    </form>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery-section animate-on-scroll">
+    <h2>Our Memories 📸</h2>
+    <div class="gallery-grid">
+      <img src="assets/images/kid1.jpg" alt="memory" />
+      <img src="assets/images/kid2.jpg" alt="memory" />
+      <img src="assets/images/kid3.jpg" alt="memory" />
+      <img src="assets/images/kid4.jpg" alt="memory" />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with ❤️ by Karguvel & Anu Family</p>
+  </footer>
+</div>

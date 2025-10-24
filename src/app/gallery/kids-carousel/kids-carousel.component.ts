@@ -7,30 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KidsCarouselComponent implements OnInit {
 
-  constructor() { }
-
   currentIndex = 0;
-  images = [
-    'assets/images/kid1.jpg',
-    'assets/images/kid2.jpg',
-    'assets/images/kid3.jpg',
-    'assets/images/kid4.jpg',
-    'assets/images/kid5.jpg'
+
+  kids = [
+    { image: 'assets/images/kid1.jpg', name: 'Dhruv', nickname: 'Chinnu', quote: 'The little star who brightens every day ✨' },
+    { image: 'assets/images/kid2.jpg', name: 'Anaya', nickname: 'Pinky', quote: 'Smiles that melt hearts ❤️' },
+    { image: 'assets/images/kid3.jpg', name: 'Aarav', nickname: 'Bunny', quote: 'Energy in every giggle 😄' },
+    { image: 'assets/images/kid4.jpg', name: 'Mithra', nickname: 'Mithu', quote: 'Cutest joy of the family 💕' },
+    { image: 'assets/images/kid5.jpg', name: 'Rithik', nickname: 'Rithu', quote: 'Our naughty sunshine ☀️' }
   ];
 
+  balloons = Array(8).fill(0); // floating decorations
+
   ngOnInit() {
-    setInterval(() => {
-      this.nextSlide();
-    }, 3000);
+    setInterval(() => this.nextSlide(), 3500);
   }
 
   nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    this.currentIndex = (this.currentIndex + 1) % this.kids.length;
   }
 
   prevSlide() {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.images.length) % this.images.length;
+    this.currentIndex = (this.currentIndex - 1 + this.kids.length) % this.kids.length;
   }
-
 }

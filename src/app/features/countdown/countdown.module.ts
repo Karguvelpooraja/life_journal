@@ -12,6 +12,6 @@ import { CountdownComponent } from './countdown.component';
   imports: [
     CommonModule,
     CountdownRoutingModule
-  ]
+  ],
 })
 export class CountdownModule { }

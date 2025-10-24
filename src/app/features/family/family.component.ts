@@ -12,7 +12,7 @@ export class FamilyComponent implements OnInit {
   ngOnInit(): void {
   }
   groomFamily = [
-    { name: 'Pongal Durai', relation: 'Father', img: '/assets/images/father.jpg' },
+    { name: 'Pongal Durai', relation: 'Father', img: '/assets/images/groomparents.jpg' },
     { name: 'Pathirakali', relation: 'Mother', img: '/assets/images/mother.jpg' },
     { name: 'Palkani', relation: 'Elder Sister', img: '/assets/images/sister1.jpg' },
     { name: 'Ananthi', relation: 'Younger Sister', img: '/assets/images/sister2.jpg' },

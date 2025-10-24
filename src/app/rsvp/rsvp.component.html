@@ -1,4 +1,6 @@
 <div class="rsvp-container">
+  <div class="rsvp-background"></div>
+
   <h2 class="title">💌 RSVP – Confirm Your Presence</h2>
   <p class="desc">
     We’re excited to celebrate our wedding with you!  
@@ -12,7 +14,7 @@
     <label>Will you attend?*</label>
     <select [(ngModel)]="attending" name="attending" required>
       <option value="">Select</option>
-      <option value="Wedding">Wedding – Thiruchendur Temple (9:30 AM)</option>
+      <option value="Wedding">Wedding – Karguvel Ayyanar Temple (9:30 AM)</option>
       <option value="Reception">Reception – Puthunainar Puram (Evening)</option>
       <option value="Both">Both Events</option>
       <option value="Unable">Unable to attend 😔</option>
@@ -21,11 +23,11 @@
     <label>Message / Wishes</label>
     <textarea [(ngModel)]="message" name="message" rows="4" placeholder="Write your wishes here..."></textarea>
 
-    <button type="submit" class="submit-btn">Send Response</button>
+    <button type="submit" class="submit-btn">💌 Send Response</button>
   </form>
 
   <div *ngIf="submitted" class="thankyou">
-    <h3>🙏 Thank you for your response!</h3>
+    <h3>🙏 Thank you, {{ guestName }}!</h3>
     <p>We’re looking forward to seeing you at the celebration ❤️</p>
   </div>
 </div>

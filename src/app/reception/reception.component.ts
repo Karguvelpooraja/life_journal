@@ -14,10 +14,10 @@ export class ReceptionComponent implements OnInit {
 
   receptionDetails = {
     groom: 'Karguvel Pooraja',
-    bride: 'Anu Priya',
-    date: 'November 24, 2025',
+    bride: 'Anusty',
+    date: 'November 23, 2025',
     time: '6:30 PM onwards',
-    venue: 'Sri Vari Mahal, Tiruchendur',
+    venue: 'Groom house, Puthunainarpuram',
     mapLink: 'https://maps.google.com/?q=Sri+Vari+Mahal,+Tiruchendur',
   };
 

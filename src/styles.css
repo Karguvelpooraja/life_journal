@@ -72,3 +72,64 @@
   }
 }
 
+/* ===== Global reset & variables (mobile-first) ===== */
+:root{
+  --accent:#b63a3a;       /* main maroon/gold accent */
+  --muted:#666;
+  --bg:#fffaf4;
+  --card:#fff;
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --nav-height:64px;     /* mobile nav height */
+  --safe-area-top: env(safe-area-inset-top, 0px);
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#app-root{height:100%}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#222; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+/* Links & buttons */
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+
+/* containers */
+.container{
+  width:100%;
+  padding-left:16px;
+  padding-right:16px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:640px; /* mobile-first max width */
+}
+
+/* utility spacing */
+.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-20{margin-top:20px}
+.p-12{padding:12px}.p-16{padding:16px}
+
+/* Cards */
+.card{
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  padding:12px;
+}
+
+/* Images responsive */
+img{max-width:100%;height:auto;display:block}
+
+/* Make clickable tappable targets comfortably large on mobile */
+.tap-target{min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center}
+
+/* Smooth interactions */
+*{transition:all .18s ease}
+
+/* Accessibility focus */
+:focus{outline:3px solidrgba(var(--accent), .12);outline-offset:2px}
+
+/* ===== Larger screens (tablet/desktop) ===== */
+@media (min-width: 768px){
+  :root{ --nav-height:72px; }
+  .container{max-width:900px;padding-left:24px;padding-right:24px}
+}
+
+

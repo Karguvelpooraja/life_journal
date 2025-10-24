@@ -11,7 +11,7 @@ export class LocationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  mapUrl = 'https://maps.app.goo.gl/zFbeubbgxK8xir4j7'; // replace with your map
+  mapUrl = 'https://maps.app.goo.gl/zFbeubbgxK8xir4j7'; 
   // mapUrl = 'https://www.google.com/maps/d/embed?mid=1wRTuj6_ExampleRoute'; // replace with your map
 
   routes = [

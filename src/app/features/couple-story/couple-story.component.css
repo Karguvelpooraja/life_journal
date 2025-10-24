@@ -1,3 +1,4 @@
+/* Couple Story Container */
 .couple-story-container {
   text-align: center;
   padding: 50px 20px;
@@ -6,18 +7,20 @@
   overflow-x: hidden;
 }
 
+/* Titles */
 .title {
-  font-size: 36px;
+  font-size: 2rem; /* Mobile-first */
   color: #e91e63;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 1rem;
   color: #555;
   margin-bottom: 40px;
 }
 
+/* Story Timeline */
 .story-timeline {
   position: relative;
   max-width: 900px;
@@ -28,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 60px 0;
+  margin: 40px 0; /* Reduced for mobile */
   opacity: 0;
   transform: translateY(60px);
   transition: all 0.8s ease-out;
@@ -39,12 +42,8 @@
   transform: translateY(0);
 }
 
-.story-item.left {
-  flex-direction: row;
-}
-.story-item.right {
-  flex-direction: row-reverse;
-}
+.story-item.left { flex-direction: row; }
+.story-item.right { flex-direction: row-reverse; }
 
 .story-item img {
   width: 40%;
@@ -64,48 +63,68 @@
 .content h2 {
   color: #e91e63;
   margin-bottom: 10px;
+  font-size: 1.2rem;
 }
+
 .content p {
   color: #444;
   line-height: 1.6;
+  font-size: 0.9rem;
 }
 
-/* Scroll animation trigger */
+/* Scroll Animation Trigger */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease-out;
 }
+
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Responsive */
+/* ===================== Responsive Styles ===================== */
 @media screen and (max-width: 768px) {
   .story-item {
     flex-direction: column !important;
+    margin: 30px 0;
   }
   .content, .story-item img {
     width: 90%;
+    margin: 0 auto 20px;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .content h2 {
+    font-size: 1rem;
+  }
+  .content p {
+    font-size: 0.85rem;
   }
 }
-/* ===== Couple Photo Carousel Section ===== */
+
+/* ===================== Photo Carousel ===================== */
 .photo-carousel-section {
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
 }
 
 .photo-carousel-section h2 {
   color: #e91e63;
   margin-bottom: 20px;
-  font-size: 28px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
+/* Carousel Container */
 .photo-carousel {
   position: relative;
-  width: 80%;
+  width: 95%; /* Mobile first */
   max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
@@ -113,6 +132,7 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* Slides */
 .photo-slide {
   position: absolute;
   opacity: 0;
@@ -128,20 +148,22 @@
 .photo-slide img {
   width: 100%;
   border-radius: 20px;
+  display: block;
 }
 
-/* Controls */
+/* Carousel Controls */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(255,255,255,0.8);
   border: none;
-  font-size: 26px;
+  font-size: 22px;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px;
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: all 0.3s;
 }
 
 .prev:hover, .next:hover {
@@ -151,10 +173,19 @@
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .photo-carousel {
-    width: 95%;
-  }
+/* ===================== Tablet & Desktop ===================== */
+@media (min-width: 769px) and (max-width: 992px) {
+  .title { font-size: 1.8rem; }
+  .subtitle { font-size: 1rem; }
+  .content h2 { font-size: 1.1rem; }
+  .content p { font-size: 0.9rem; }
+  .photo-carousel-section h2 { font-size: 1.7rem; }
 }
 
+@media (min-width: 993px) {
+  .title { font-size: 2.2rem; }
+  .subtitle { font-size: 1.2rem; }
+  .content h2 { font-size: 1.3rem; }
+  .content p { font-size: 1rem; }
+  .photo-carousel-section h2 { font-size: 1.9rem; }
+}

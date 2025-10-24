@@ -1,19 +1,47 @@
-<div class="gallery-container">
-  <h2>📸 Wedding Gallery</h2>
-
-  <div class="photo-grid">
-    <div *ngFor="let photo of weddingPhotos" class="photo-card">
-      <img [src]="photo" alt="Wedding Photo" />
-    </div>
+<div class="gallery-page">
+  <!-- Floating background decoration -->
+  <div class="floating-bg">
+    <div class="petal" *ngFor="let p of petals"></div>
   </div>
 
-  <h2>👨‍👩‍👧‍👦 Family Gallery</h2>
-  <div class="photo-grid">
-    <div *ngFor="let photo of familyPhotos" class="photo-card">
-      <img [src]="photo" alt="Family Photo" />
+  <div class="gallery-container">
+    <h1 class="gallery-title">💍 Wedding Memories Gallery 📸</h1>
+    <p class="gallery-subtitle">
+      "Capturing every moment of love, laughter, and togetherness."
+    </p>
+
+    <!-- Wedding Gallery -->
+
+    <!-- <h2>👰‍♀️ Wedding Moments</h2>
+    <div class="photo-grid">
+      <div *ngFor="let photo of weddingPhotos" class="photo-card" (click)="openLightbox(photo)">
+        <img [src]="photo" alt="Wedding Photo" />
+      </div>
+    </div> -->
+
+    <!-- Family Gallery -->
+    <h2>Groom👨‍👩‍👧‍👦 Family Gallery</h2>
+    <div class="photo-grid">
+      <div *ngFor="let photo of familyPhotos" class="photo-card" (click)="openLightbox(photo)">
+        <img [src]="photo" alt="Family Photo" />
+      </div>
     </div>
+    <!-- Family Gallery -->
+    <h2>Bride👨‍👩‍👧‍👦 Family Gallery</h2>
+    <div class="photo-grid">
+      <div *ngFor="let photo of familyPhotos" class="photo-card" (click)="openLightbox(photo)">
+        <img [src]="photo" alt="Family Photo" />
+      </div>
+    </div>
+
+    <!-- Kids Corner -->
+    <!-- <h2>🧒 Kids Corner</h2> -->
+    <!-- <app-kids></app-kids> -->
+     <!-- <app-kids-carousel></app-kids-carousel> -->
   </div>
 
-  <h2>🧒 Kids Corner</h2>
-  <app-kids-carousel></app-kids-carousel>
+  <!-- Lightbox -->
+  <div class="lightbox" *ngIf="selectedPhoto" (click)="closeLightbox()">
+    <img [src]="selectedPhoto" alt="Enlarged Photo" />
+  </div>
 </div>

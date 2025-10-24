@@ -1,66 +1,171 @@
 .kids-page {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(180deg, #fff0f6 0%, #ffeef5 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px;
-  background: linear-gradient(180deg, #fffdf0, #ffeaf2);
-  border-radius: 12px;
 }
 
-.kids-page h2 {
-  color: #b63a3a;
-  margin-bottom: 6px;
-}
-.kids-page p {
-  color: #555;
-  margin-bottom: 16px;
-}
-
-.carousel {
+/* Content layout */
+.kids-content {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  z-index: 2;
+  color: #ff4d88;
 }
 
-.image-container {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff4d88;
+  text-shadow: 2px 2px #fff;
+  margin-bottom: 10px;
 }
 
-.image-container img {
-  width: 100%;
-  height: 100%;
+.quote {
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.kid-display {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.kid-image {
+  width: 180px;
+  height: 180px;
   object-fit: cover;
-  transition: opacity 0.5s;
-}
-
-.nav {
-  background: transparent;
-  border: none;
-  font-size: 30px;
-  color: #b63a3a;
-  cursor: pointer;
-  user-select: none;
-  font-weight: bold;
-}
-.nav:hover {
-  color: #e62b2b;
-}
-
-.dots {
-  margin-top: 10px;
-}
-.dots span {
-  height: 10px;
-  width: 10px;
-  margin: 0 3px;
-  background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  border: 5px solid #ff6699;
+  box-shadow: 0 6px 25px rgba(255, 102, 153, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-.dots .active {
-  background-color: #b63a3a;
+
+.kid-image:hover {
+  transform: scale(1.08);
+}
+
+.kid-name {
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff3385;
+}
+
+.kid-nickname {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* Decorative line */
+.decor-line {
+  width: 80px;
+  height: 4px;
+  background: #ff66b2;
+  border-radius: 10px;
+  margin: 15px auto;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Background Animations */
+.floating-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 60px;
+  border-radius: 20px;
+  animation: floatBalloon 14s infinite ease-in;
+  opacity: 0.6;
+}
+@keyframes floatBalloon {
+  0% { transform: translateY(0); opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Hearts */
+.heart {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background-color: #ff3366;
+  transform: rotate(45deg);
+  animation: floatHeart 12s infinite ease-in;
+  opacity: 0.5;
+}
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff3366;
+  border-radius: 50%;
+}
+.heart::before { top: -10px; left: 0; }
+.heart::after { left: -10px; top: 0; }
+
+@keyframes floatHeart {
+  0% { transform: translateY(0) rotate(45deg); opacity: 0.5; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-100vh) rotate(45deg); opacity: 0; }
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff;
+  opacity: 0.6;
+  animation: sparkleAnim 6s infinite ease-in-out;
+}
+@keyframes sparkleAnim {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title { font-size: 1.6rem; }
+  .kid-image { width: 140px; height: 140px; }
+  .kid-name { font-size: 1.4rem; }
+  .quote { font-size: 1rem; }
 }

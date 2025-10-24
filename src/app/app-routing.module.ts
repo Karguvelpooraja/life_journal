@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'fun', loadChildren: () => import('./features/fun/fun.module').then(m => m.FunModule) },
   { path: 'couple-story', loadChildren: () => import('./features/couple-story/couple-story.module').then(m => m.CoupleStoryModule) },
   { path: 'countdown', loadChildren: () => import('./features/countdown/countdown.module').then(m => m.CountdownModule) },
+  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
   // future lazy modules: '/family', '/gallery', '/kids' etc.
   { path: '**', redirectTo: '' }
 ];

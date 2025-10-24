@@ -1,9 +1,19 @@
-<div class="carousel-container">
-  <button class="nav prev" (click)="prevSlide()">&#10094;</button>
+<div class="kids-carousel-wrapper">
+  <!-- Floating decorations -->
+  <div class="floating-balloon" *ngFor="let balloon of balloons"></div>
 
-  <div class="carousel-slide">
-    <img [src]="images[currentIndex]" alt="Kid Image" />
+  <div class="carousel-container">
+    <button class="nav prev" (click)="prevSlide()">&#10094;</button>
+
+    <div class="carousel-slide fade">
+      <img [src]="kids[currentIndex].image" alt="{{ kids[currentIndex].name }}" />
+
+      <div class="kid-info">
+        <h3>{{ kids[currentIndex].name }} <span>({{ kids[currentIndex].nickname }})</span></h3>
+        <p>{{ kids[currentIndex].quote }}</p>
+      </div>
+    </div>
+
+    <button class="nav next" (click)="nextSlide()">&#10095;</button>
   </div>
-
-  <button class="nav next" (click)="nextSlide()">&#10095;</button>
 </div>

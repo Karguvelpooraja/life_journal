@@ -1,21 +1,23 @@
-<section class="kids-page">
-  <h2>Our Cute Little Guests 👶🎉</h2>
-  <p>Meet the adorable kids bringing joy to our celebration!</p>
+<div class="kids-page">
+  <div class="floating-bg">
+    <div class="balloon" *ngFor="let i of balloons"></div>
+    <div class="heart" *ngFor="let i of hearts"></div>
+    <div class="sparkle" *ngFor="let s of sparkles"></div>
+  </div>
 
-  <div class="carousel">
-    <button class="nav prev" (click)="prev()">&#10094;</button>
+  <div class="kids-content">
+    <h1 class="title">Our Little Stars 👶✨</h1>
+    <p class="quote">
+      “Every child is a different kind of flower, and together they make this world a beautiful garden.” 🌸
+    </p>
 
-    <div class="image-container">
-      <img [src]="kidsImages[currentIndex]" alt="Kid photo" />
+    <div class="kid-display" (click)="togglePause()">
+      <img [src]="currentKid.image" alt="{{ currentKid.name }}" class="kid-image" />
+      <h2 class="kid-name">{{ currentKid.name }}</h2>
+      <p class="kid-nickname">{{ currentKid.nickname }}</p>
     </div>
 
-    <button class="nav next" (click)="next()">&#10095;</button>
+    <div class="decor-line"></div>
+    <p class="footer-text">Tap a kid to pause or continue slideshow 💕</p>
   </div>
-
-  <div class="dots">
-    <span
-      *ngFor="let img of kidsImages; let i = index"
-      [class.active]="i === currentIndex"
-    ></span>
-  </div>
-</section>
+</div>

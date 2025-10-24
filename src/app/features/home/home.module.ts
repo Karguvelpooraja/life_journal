@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { CountdownComponent } from './countdown/countdown.component';
+// import { CountdownModule } from '../countdown/countdown.module';
 
 
 @NgModule({
@@ -18,6 +19,8 @@ import { CountdownComponent } from './countdown/countdown.component';
     RouterModule.forChild([
       { path: '', component: HomeComponent } // default page for '/'
     ])
-  ]
+  ],
+  exports:[HomeComponent,
+    CountdownComponent]
 })
 export class HomeModule { }
