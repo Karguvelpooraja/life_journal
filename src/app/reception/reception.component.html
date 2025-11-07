@@ -36,8 +36,11 @@
       </div>
 
       <div class="btns">
-        <button class="btn" (click)="addToCalendar()">📅 Add to Calendar</button>
-        <button class="btn" (click)="openMap()">📍 View on Map</button>
+        <!-- <button class="btn" (click)="addToCalendar()">📅 Add to Calendar</button> -->
+        <!-- <button class="btn" (click)="openMap()">📍 View on Map</button> -->
+        <a [href]="'https://maps.app.goo.gl/7ipjDsoCXhoW2XfY9'" target="_blank" class="map-link btn">
+            📍 View in Google Maps
+          </a>
       </div>
     </div>
 
