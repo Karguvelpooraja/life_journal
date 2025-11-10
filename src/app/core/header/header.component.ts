@@ -19,7 +19,7 @@ export class HeaderComponent  {
     // { label: 'Directions', path: '/directions' },
     { label: 'Reception', path: '/reception' },
     { label: 'Kids', path: '/kids' },
-    // { label: 'Countdown', path: '/countdown' },
+    { label: 'Countdown', path: '/countdown' },
     // { label: 'RSVP', path: '/rsvp' },
     { label: 'Map', path: '/location' },
     { label: 'Corrosel', path: '/carousel' },

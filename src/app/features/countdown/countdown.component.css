@@ -1,150 +1,91 @@
-/* 🌸 Countdown container */
-.countdown-container {
-  position: relative;
-  overflow: hidden;
+.contact-card {
+  background: linear-gradient(135deg, #fff8f0, #ffe4ec);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  background: linear-gradient(135deg, #fff5f9, #ffe0eb);
-  padding: 100px 20px;
-  color: #b30059;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 1.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* 🌸 Floating hearts container using multiple pseudo-elements */
-.countdown-container::before,
-.countdown-container::after,
-.countdown-container span.heart1,
-.countdown-container span.heart2,
-.countdown-container span.heart3,
-.countdown-container span.heart4,
-.countdown-container span.heart5 {
-  content: "💖";
-  position: absolute;
-  top: 100%;
-  font-size: 20px;
-  opacity: 0.6;
-  animation: floatHeart linear infinite, heartColor 6s ease-in-out infinite alternate;
-}
-
-/* Different hearts with random sizes, positions, and delays */
-.countdown-container::before  { left: 10%; animation-duration: 10s; font-size: 22px; }
-.countdown-container::after   { left: 80%; animation-duration: 12s; font-size: 28px; opacity: 0.4; }
-.countdown-container span.heart1 { left: 25%; animation-duration: 14s; font-size: 24px; opacity:0.5; }
-.countdown-container span.heart2 { left: 40%; animation-duration: 11s; font-size: 18px; opacity:0.6; }
-.countdown-container span.heart3 { left: 55%; animation-duration: 13s; font-size: 20px; opacity:0.5; }
-.countdown-container span.heart4 { left: 70%; animation-duration: 15s; font-size: 22px; opacity:0.6; }
-.countdown-container span.heart5 { left: 85%; animation-duration: 12s; font-size: 26px; opacity:0.4; }
-
-/* Floating animation with slight horizontal movement */
-@keyframes floatHeart {
-  0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.6; }
-  25%  { transform: translateY(-150px) translateX(10px) rotate(15deg); opacity: 0.8; }
-  50%  { transform: translateY(-300px) translateX(-10px) rotate(-10deg); opacity: 1; }
-  75%  { transform: translateY(-450px) translateX(8px) rotate(5deg); opacity: 0.8; }
-  100% { transform: translateY(-600px) translateX(0) rotate(0deg); opacity: 0; }
-}
-
-/* Heart color change */
-@keyframes heartColor {
-  0%   { color: #ff3366; }
-  25%  { color: #ff6699; }
-  50%  { color: #ff99cc; }
-  75%  { color: #ff3366; }
-  100% { color: #ff6699; }
-}
-
-/* ✨ Text styling */
-.title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #660033;
-}
-
-.subtitle span {
-  color: #ff3366;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-/* ⏳ Timer boxes */
-.timer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-.box {
-  background: #fff;
-  border-radius: 16px;
-  width: 90px;
-  height: 100px;
-  box-shadow: 0 0 15px rgba(255, 51, 102, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 25px auto;
+  max-width: 650px;
   transition: all 0.3s ease;
-  animation: glowPulse 3s infinite ease-in-out;
 }
 
-@keyframes glowPulse {
-  0% { box-shadow: 0 0 10px rgba(255, 51, 102, 0.3); }
-  50% { box-shadow: 0 0 25px rgba(255, 51, 102, 0.6); }
-  100% { box-shadow: 0 0 10px rgba(255, 51, 102, 0.3); }
-}
-
-.box:hover {
-  transform: translateY(-4px);
-  background: #fff0f6;
-}
-
-.number {
+.contact-title {
   font-size: 1.8rem;
-  font-weight: 700;
-  color: #e60073;
+  color: #c2185b;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.label {
-  font-size: 0.8rem;
-  color: #b30059;
-  margin-top: 6px;
+.contact-desc {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 25px;
 }
 
-/* 📱 Mobile */
-@media (max-width: 600px) {
-  .title { font-size: 1.4rem; }
-  .subtitle { font-size: 1rem; margin-bottom: 25px; }
-  .subtitle span { font-size: 1.3rem; }
-  .box { width: 75px; height: 85px; }
-  .number { font-size: 1.4rem; }
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
-/* 💻 Tablet */
-@media (min-width: 601px) and (max-width: 992px) {
-  .title { font-size: 1.6rem; }
-  .subtitle { font-size: 1.1rem; }
-  .box { width: 85px; height: 95px; }
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  width: 85%;
+  max-width: 400px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
 }
 
-/* 🖥 Desktop */
-@media (min-width: 993px) {
-  .countdown-container { padding: 120px 20px; }
-  .box { width: 110px; height: 120px; }
-  .number { font-size: 2.2rem; }
-  .subtitle span { font-size: 1.9rem; }
+.contact-item:hover {
+  background: #fff0f6;
+  transform: scale(1.03);
+}
+
+.contact-item.groom {
+  border-left: 5px solid #28a745; /* Green strip for groom */
+}
+
+.contact-item.bride {
+  border-left: 5px solid #e83e8c; /* Pink strip for bride */
+}
+
+.info-text h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.info-text p {
+  margin: 3px 0 0 0;
+  font-weight: 600;
+  color: #444;
+}
+
+.call-btn {
+  background: #28a745;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.call-btn:hover {
+  background: #34d058;
+}
+
+.call-btn i {
+  font-size: 1.3rem;
+}
+
+.thanks-text {
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.95rem;
 }

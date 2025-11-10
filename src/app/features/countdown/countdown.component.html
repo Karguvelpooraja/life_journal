@@ -1,17 +1,32 @@
-<div class="countdown-container">
-  <h2 class="title">💞 Countdown to Our Big Day 💞</h2>
-  <h3 class="subtitle">
-    Only <span>{{ days }}</span> days left for <b>Karguvel ❤️ Anu’s</b> wedding!
-  </h3>
+<div class="contact-card">
+  <h2 class="contact-title">💞 Contact Our Families</h2>
+  <p class="contact-desc">
+    For any wedding details, travel info, or blessings — feel free to reach out to us directly ❤️
+  </p>
 
-  <div class="timer-wrapper">
-    <div class="timer">
-      <div class="box" *ngFor="let item of timeList">
-        <div class="flip">
-          <span class="number" [@flipAnimation]="item.value">{{ item.value }}</span>
-        </div>
-        <span class="label">{{ item.label }}</span>
+  <div class="contact-info">
+    <!-- Groom Side -->
+    <div class="contact-item groom">
+      <div class="info-text">
+        <h3>🤵 Groom’s Side</h3>
+        <p><strong>Karguvel Pooraja</strong></p>
       </div>
+      <a href="tel:+918098278357" class="call-btn" title="Call Groom">
+        <i class="fa fa-phone"></i>
+      </a>
+    </div>
+
+    <!-- Bride Side -->
+    <div class="contact-item bride">
+      <div class="info-text">
+        <h3>👰 Bride’s Side</h3>
+        <p><strong>Karthi (Bride’s brother)</strong></p>
+      </div>
+      <a href="tel:+919003394011" class="call-btn" title="Call Bride Family">
+        <i class="fa fa-phone"></i>
+      </a>
     </div>
   </div>
+
+  <p class="thanks-text">📞 Tap the green icon to connect instantly</p>
 </div>
