@@ -27,7 +27,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   minutes = 0;
   seconds = 0;
   private timer: any;
-  whatsappNumber = '9168098278357';
+  whatsappNumber = '918098278357';
   whatsappMessage = 'Hi Karguvel, I saw your wedding website!';
   whatsappLink = '';
 
