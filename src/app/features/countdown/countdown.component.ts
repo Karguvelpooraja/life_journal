@@ -27,6 +27,10 @@ export class CountdownComponent implements OnInit, OnDestroy {
   minutes = 0;
   seconds = 0;
   private timer: any;
+  whatsappNumber = '9168098278357';
+  whatsappMessage = 'Hi Karguvel, I saw your wedding website!';
+  whatsappLink = '';
+
 
   get timeList() {
     return [
@@ -38,6 +42,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.whatsappLink = `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(this.whatsappMessage)}`;
     this.startCountdown();
   }
 

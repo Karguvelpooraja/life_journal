@@ -1,16 +1,29 @@
 <div class="gallery-container">
-  <h2 class="page-title">📸 Our Wedding Moments</h2>
+  <h2 class="page-title">📸 Our Engagement Moments</h2>
 
   <!-- WEDDING CAROUSEL -->
-  <div class="carousel">
+  <!-- <div class="carousel">
     <div class="carousel-track">
+      <img [src]="entryImg" alt="Wedding 1" loading="lazy">
+      <img [src]="houseEntryImg" alt="Wedding 1" loading="lazy">
       <img src="assets/images/wedding1.jpg" alt="Wedding 1">
       <img src="assets/images/wedding2.jpg" alt="Wedding 2">
       <img src="assets/images/wedding3.jpg" alt="Wedding 3">
       <img src="assets/images/wedding4.jpg" alt="Wedding 4">
       <img src="assets/images/wedding5.jpg" alt="Wedding 5">
     </div>
+  </div> -->
+
+  <div class="carousel">
+  <div class="carousel-track">
+    <img 
+      *ngFor="let img of engagementImages" 
+      [src]="img + '?f_auto,q_auto,w_900'" 
+      loading="lazy" 
+      alt="Wedding photo"
+    />
   </div>
+</div>
 
   <!-- RECEPTION CAROUSEL -->
   <h3 class="section-title">✨ Reception Highlights</h3>

@@ -89,3 +89,25 @@
   color: #666;
   font-size: 0.95rem;
 }
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.whatsapp-link:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-link i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
