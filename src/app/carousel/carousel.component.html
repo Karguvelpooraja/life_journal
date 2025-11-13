@@ -15,15 +15,11 @@
   </div> -->
 
   <div class="carousel">
-  <div class="carousel-track">
-    <img 
-      *ngFor="let img of engagementImages" 
-      [src]="img + '?f_auto,q_auto,w_900'" 
-      loading="lazy" 
-      alt="Wedding photo"
-    />
+    <div class="carousel-track">
+      <img *ngFor="let img of engagementImages" [src]="img + '?f_auto,q_auto,w_900'" loading="lazy"
+        alt="Wedding photo" />
+    </div>
   </div>
-</div>
 
   <!-- RECEPTION CAROUSEL -->
   <h3 class="section-title">✨ Reception Highlights</h3>

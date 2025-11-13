@@ -43,7 +43,7 @@
   height: auto;
   object-fit: cover;
   border-right: 3px solid #fff;
-  transition: transform 0.3s ease;
+  transition: transform 1.5s ease;
 }
 
 .carousel-track img:hover {
