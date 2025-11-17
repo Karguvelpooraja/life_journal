@@ -2,5 +2,14 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": ["/assets/*", "/*.css", "/*.js"]
-  }
+  },
+"routes": [
+    {
+      "route": "/*",
+      "redirect": {
+        "to": "https://www.karguvel.com",
+        "statusCode": 301
+      }
+    }
+  ]
 }
