@@ -1,46 +1,44 @@
 <div class="gallery-container">
   <h2 class="page-title">📸 Our Engagement Moments</h2>
 
-  <!-- WEDDING CAROUSEL -->
-  <!-- <div class="carousel">
-    <div class="carousel-track">
-      <img [src]="entryImg" alt="Wedding 1" loading="lazy">
-      <img [src]="houseEntryImg" alt="Wedding 1" loading="lazy">
-      <img src="assets/images/wedding1.jpg" alt="Wedding 1">
-      <img src="assets/images/wedding2.jpg" alt="Wedding 2">
-      <img src="assets/images/wedding3.jpg" alt="Wedding 3">
-      <img src="assets/images/wedding4.jpg" alt="Wedding 4">
-      <img src="assets/images/wedding5.jpg" alt="Wedding 5">
-    </div>
-  </div> -->
-
+  <!-- ENGAGEMENT CAROUSEL -->
   <div class="carousel">
     <div class="carousel-track">
-      <img *ngFor="let img of engagementImages" [src]="img + '?f_auto,q_auto,w_900'" loading="lazy"
-        alt="Wedding photo" />
+
+      <img *ngFor="let img of engagementImages; let i = index"
+           [attr.loading]="i < 3 ? 'eager' : 'lazy'"
+           [src]="img + '?f_auto,q_auto,w_900,c_scale'"
+           width="900" height="600"
+           alt="Engagement Photo" />
+
     </div>
   </div>
 
-  <!-- RECEPTION CAROUSEL -->
-  <h3 class="section-title">✨ Reception Highlights</h3>
+  <!-- FAMILY HIGHLIGHTS -->
+  <h3 class="section-title">✨ Engagement Highlights</h3>
   <div class="carousel">
     <div class="carousel-track">
-      <img src="assets/images/reception1.jpg" alt="Reception 1">
-      <img src="assets/images/reception2.jpg" alt="Reception 2">
-      <img src="assets/images/reception3.jpg" alt="Reception 3">
-      <img src="assets/images/reception4.jpg" alt="Reception 4">
+
+      <img *ngFor="let img of failyImages"
+           attr.loading="lazy"
+           [src]="img + '?f_auto,q_auto,w_900,c_scale'"
+           width="900" height="600"
+           alt="Family Photo" />
+
     </div>
   </div>
 
-  <!-- FAMILY CAROUSEL -->
-  <h3 class="section-title">👨‍👩‍👧‍👦 Family & Friends</h3>
+  <!-- WELCOME IMAGES -->
+  <h3 class="section-title">👨‍👩‍👧‍👦 Welcome Images</h3>
   <div class="carousel">
     <div class="carousel-track">
-      <img src="assets/images/family1.jpg" alt="Family 1">
-      <img src="assets/images/family2.jpg" alt="Family 2">
-      <img src="assets/images/family3.jpg" alt="Family 3">
-      <img src="assets/images/family4.jpg" alt="Family 4">
-      <img src="assets/images/family5.jpg" alt="Family 5">
+
+      <img *ngFor="let img of giftGivingImages"
+           attr.loading="lazy"
+           [src]="img + '?f_auto,q_auto,w_900,c_scale'"
+           width="900" height="600"
+           alt="Welcome Photo" />
+
     </div>
   </div>
 </div>

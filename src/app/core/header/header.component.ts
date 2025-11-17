@@ -12,19 +12,19 @@ export class HeaderComponent  {
   navLinks = [
     { label: 'Home', path: '/' },
     { label: 'Schedule', path: '/schedule' },
-    { label: 'Family', path: '/family' },
+    // { label: 'Family', path: '/family' },
     // { label: 'Fun', path: '/fun' },
-    { label: 'Gallery', path: '/gallery' },
+    // { label: 'Gallery', path: '/gallery' },
     // { label: 'Story', path: '/couple-story' },
     // { label: 'Directions', path: '/directions' },
     { label: 'Reception', path: '/reception' },
-    { label: 'Kids', path: '/kids' },
-    { label: 'Countdown', path: '/countdown' },
+    // { label: 'Kids', path: '/kids' },
+    { label: 'Contact', path: '/countdown' },
     // { label: 'RSVP', path: '/rsvp' },
     { label: 'Map', path: '/location' },
-    { label: 'Corrosel', path: '/carousel' },
-    { label: 'Contact', path: '/contact' },
-    { label: 'Dashboard', path: '/dashboard' }
+    { label: 'Photos', path: '/carousel' },
+    // { label: 'Contact', path: '/contact' },
+    // { label: 'Dashboard', path: '/dashboard' }
   ];
 
   closeNavbar() {
