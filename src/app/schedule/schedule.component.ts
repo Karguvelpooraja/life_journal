@@ -25,7 +25,7 @@ export class ScheduleComponent implements OnInit, AfterViewInit {
       { name: 'Night dinner', date: 'Nov 22, 2025', time: '8:30 PM - 10:30 PM ', location: "Karguvel's House", description: 'Night dinner and playing card games' },
       { name: 'Maternal Uncle Ceremony', date: 'Nov 23, 2025', time: '7:00 AM - 8:00 AM', location: "Karguvel's House", description: 'Thai maman sadangu ceremony ' },
       { name: 'Groom welcome ceremony', date: 'Nov 23, 2025', time: '9:00 AM', location: "Anu's House", description: 'Groom welcome ceremony in bride house' },
-      { name: 'Thaali Tying Ceremony', date: 'Nov 23, 2025', time: '10:30 AM', location: 'Karguvel ayyanar Temple', description: 'Main wedding ceremony — sacred moment of tying the Thali.' },
+      { name: 'Wedding Ceremony', date: 'Nov 23, 2025', time: '10:30 AM', location: 'Karguvel ayyanar Temple', description: 'Main wedding ceremony — sacred moment of tying the Thali.' },
       { name: 'Lunch & Photo Session', date: 'Nov 23, 2025', time: '12:30 PM', location: 'Kayalpattinam', description: 'Traditional South Tamil Nadu lunch & family photoshoot.' },
       { name: 'Bride welcome ceremony', date: 'Nov 23, 2025', time: '5:00 PM', location: "Karguvel's House", description: 'Bride welcome ceremony in groom house' },
       { name: 'Reception', date: 'Nov 23, 2025', time: '6:30 PM', location: 'Groom house ,Puthunainar Puram (near Sawyerpuram, Tuticorin)', description: 'Grand reception with lights & celebration!' }
